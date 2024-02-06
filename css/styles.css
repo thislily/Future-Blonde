@@ -299,22 +299,57 @@ footer img {
   gap: 32px;
 }
 
-.splash-image {
-  width: 50%;
-  max-width: 720px;
-  height: 448px;
-  object-fit: cover;
-  margin-right: 48px;
-}
-
 .splash-title {
   width: 30%;
   min-width: 368px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 48px;
+  margin-left: 16px;
 }
+
+.splash-image-container {
+  position: relative;
+  display: inline-block;
+  height: 448px;
+  width: 60%;
+  max-width: 720px;
+  margin-right: 16px;
+  overflow: hidden;
+}
+
+.splash-image {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75); 
+  opacity: 0; 
+  transition: opacity 0.5s ease;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+
+.splash-image-container:hover .overlay {
+  opacity: 1;
+}
+
+.overlay-text {
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
 
 /* CAROUSEL */
 
