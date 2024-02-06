@@ -567,7 +567,7 @@ textarea {
 }
 
 textarea {
-  height: 128px;
+  height: 102px;
 }
 
 .subscribe-container button {
@@ -602,11 +602,16 @@ textarea {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.contact-form input{
+  margin-bottom: 16px;
 }
 
 .contact-form button {
-  margin: 0px auto;
+  margin: 26px auto 0px;
 }
 
 /* ABOUT */
