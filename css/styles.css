@@ -162,7 +162,7 @@ h1 {
 
 /* BUTTONS */
 
-.beige-button,
+.white-button,
 .pink-button,
 .dark-button {
   display: flex;
@@ -187,12 +187,13 @@ h1 {
   background-color: var(--clr-soft-black);
 }
 
-.beige-button {
-  background-color: var(--clr-tan);
+.white-button {
+  background-color: var(--clr-white);
 }
 
-.beige-button:hover {
-  background-color: var(--clr-melon);
+.white-button:hover {
+  background-color: var(--clr-deep-teal);
+  color: var(--clr-white);
 }
 
 .pink-button {
@@ -200,7 +201,8 @@ h1 {
 }
 
 .pink-button:hover {
-  background-color: var(--clr-tan);
+  background-color: var(--clr-deep-teal);
+  color: var(--clr-white);
 }
 
 /* HEADER & FOOTER*/
@@ -411,15 +413,20 @@ footer img {
   padding: 48px 32px;
 }
 
-.bio-text,
-.bio-img {
+.bio-text{
   width: 50%;
   max-width: 528px;
-  height: 100%;
+}
+
+.bio-img-wrapper {
+  width: 50%;
+  max-width: 528px;
+  height: 368px;
 }
 
 .bio-img {
   height: 100%;
+width: 100%;
   object-fit: cover;
 }
 
@@ -468,7 +475,7 @@ article div {
 }
 
 .mini-blog-container .dark-button {
-  margin: 16px auto;
+  margin: 16px auto 0px;
   padding: 16px;
 }
 
@@ -557,8 +564,8 @@ label {
 
 input,
 textarea {
-  border-left: 2px var(--clr-black) solid;
-  border-bottom: 2px var(--clr-black) solid;
+  border-left: 2px var(--clr-med-grey) solid;
+  border-bottom: 2px var(--clr-med-grey) solid; 0
   width: 100%;
   padding: 8px;
   font-family: var(--font-body);
