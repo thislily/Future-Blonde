@@ -36,7 +36,7 @@ TABLE OF CONTENTS
   --fs-h1-big: 64px;
   --fs-h1-reg: 32px;
   --fs-h2: 20px;
-  --fs-body: 16px;
+  --fs-body: 18px;
 
   --spc-big: 48px;
   --spc-med: 32px;
@@ -122,6 +122,7 @@ p {
   color: var(--clr-black);
   margin: var(--spc-small) 0px;
   text-wrap: pretty;
+  line-height: 120%;
 }
 
 .publish-date {
