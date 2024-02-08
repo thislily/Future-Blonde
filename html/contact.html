@@ -13,6 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,600;1,300&family=Yeseva+One&display=swap"
       rel="stylesheet"
     />
+    <script src="/js/nav.js" defer></script>
     <link rel="stylesheet" href="/css/styles.css" />
     <title>Future Blonde | Contact Us</title>
   </head>
@@ -33,11 +34,11 @@
           </a>
 
           <ul>
-            <li><a href="about.html"> About </a></li>
-            <li><a href="blog.html"> Blog </a></li>
-            <li class="selected-nav-li">
-              <a href="contact.html"> Contact </a>
-            </li>
+            <ul class="nav-menu">
+              <li class="nav-item"><a class="nav-link" href="about.html"> About </a></li>
+              <li class="nav-item"><a class="nav-link" href="blog.html"> Blog </a></li>
+              <li class="nav-item selected-nav-li"><a class="nav-link" href="contact.html"> Contact </a></li>
+            </ul>
           </ul>
 
           <div class="hamburger">
@@ -60,7 +61,7 @@
 
       <section class="contact-container">
         <h1>Let me know what's on your mind</h1>
-        <form class="contact-form" action="">
+        <form class="contact-form get-stacked" action="">
           <div>
             <label for="name">Name</label>
             <input type="text" id="name" name="name" />
@@ -87,7 +88,7 @@
 
       <div class="spacing-line"></div>
 
-      <section class="mini-bio">
+      <section class="mini-bio get-stacked">
         <div class="bio-text">
           <h2 class="signature">Welcome to my World</h2>
           <p class="big-p">

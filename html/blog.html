@@ -13,6 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,600;1,300&family=Yeseva+One&display=swap"
       rel="stylesheet"
     />
+    <script src="/js/nav.js" defer></script>
     <link rel="stylesheet" href="/css/styles.css" />
     <title>Future Blonde | The Blog</title>
   </head>
@@ -32,10 +33,10 @@
             />
           </a>
 
-          <ul>
-            <li><a href="about.html"> About </a></li>
-            <li class="selected-nav-li"><a href="blog.html"> Blog </a></li>
-            <li><a href="contact.html"> Contact </a></li>
+          <ul class="nav-menu">
+            <li class="nav-item"><a class="nav-link" href="about.html"> About </a></li>
+            <li class="nav-item selected-nav-li"><a class="nav-link" href="blog.html"> Blog </a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html"> Contact </a></li>
           </ul>
 
           <div class="hamburger">
@@ -58,24 +59,26 @@
 
       <section class="blog-container">
         <h1>What's New?</h1>
-        <div class="blog-filter">
-          <div class="select-wrapper">
-            <select class="select-filter" name="filter" id="filter">
-              <option value="all">All Posts</option>
-              <option value="fashion">Fashion</option>
-              <option value="health">Health</option>
-              <option value="lifestyle">Lifestyle</option>
-              <option value="survival">Survival</option>
-            </select>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-
-          <a href="post/index.html/? NEWEST POST" class="white-button"
-            >See Latest Post <i class="fas fa-chevron-right"></i
-          ></a>
-        </div>
+        
 
         <div class="blog-grid">
+          <div class="blog-filter">
+            <div class="select-wrapper">
+              <select class="select-filter" name="filter" id="filter">
+                <option value="all">All Posts</option>
+                <option value="fashion">Fashion</option>
+                <option value="health">Health</option>
+                <option value="lifestyle">Lifestyle</option>
+                <option value="survival">Survival</option>
+              </select>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+  
+            <a href="post/index.html/? NEWEST POST" class="white-button"
+              >See Latest Post <i class="fas fa-chevron-right"></i
+            ></a>
+          </div>
+
           <a href="post/index.html" class="thumbnail">
             <img src="/images/day-life-1.jpg" alt="a room" />
             <h2>A Day in the Life</h2>
@@ -210,7 +213,7 @@
 
       <div class="spacing-line"></div>
 
-      <section class="mini-bio">
+      <section class="mini-bio get-stacked">
         <div class="bio-text">
           <h2 class="signature">Welcome to my World</h2>
           <p class="big-p">

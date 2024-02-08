@@ -9,6 +9,7 @@
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="/js/nav.js" defer></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,600;1,300&family=Yeseva+One&display=swap"
       rel="stylesheet"
@@ -20,14 +21,14 @@
     <header>
       <div class="max-width">
         <nav>
-          <a href="index.html"
+          <a href="index.html" class="home-link"
             ><img src="images/logo-first-run.jpg" alt="future blonde logo"
           /></a>
 
-          <ul>
-            <li><a href="html/about.html"> About </a></li>
-            <li><a href="html/blog.html"> Blog </a></li>
-            <li><a href="html/contact.html"> Contact </a></li>
+          <ul class="nav-menu">
+            <li class="nav-item"><a class="nav-link" href="html/about.html"> About </a></li>
+            <li class="nav-item"><a class="nav-link" href="html/blog.html"> Blog </a></li>
+            <li class="nav-item"><a class="nav-link" href="html/contact.html"> Contact </a></li>
           </ul>
 
           <div class="hamburger">
@@ -43,16 +44,19 @@
     </header>
 
     <main>
-      <section class="front-splash">
+      <section class="front-splash get-stacked centered-stack">
+        
         <div class="splash-title">
-          <h1 class="title">
-            <img src="images/text-logo-stacked.svg" alt="future blonde logo" />
+          <h1 >
+            <img class="title" src="images/text-logo-stacked.svg" alt="future blonde logo" />
           </h1>
-          <a href="html/blog.html" class="white-button"
+          <a href="html/blog.html" class="white-button ca-button"
             >See Latest Updates
             <i class="fas fa-chevron-right"></i>
           </a>
         </div>
+          
+        
 
         <div class="splash-image-container">
           <img
@@ -60,10 +64,17 @@
             src="images/room-1.jpg"
             alt="A minimalist bedroom with a view out the window to a post apocalyptic world."
           />
+
           <div class="overlay">
             <h2 class="overlay-text">
               A Day in the Life: Healthy Living in 2074
             </h2>
+          </div>
+
+          <div class="splash-image-controller">
+            <button class="circle filled-circle"></button>
+            <button class="circle"></button>
+            <button class="circle"></button>
           </div>
         </div>
       </section>
@@ -126,7 +137,7 @@
 
       <div class="spacing-line"></div>
 
-      <section class="mini-bio">
+      <section class="mini-bio get-stacked">
         <div class="bio-text">
           <h2 class="signature">Welcome to my World</h2>
           <p class="big-p">
@@ -161,7 +172,7 @@
           <h2>A Day in the Life: Healthy Living in 2074</h2>
           <p class="publish-date">Published: January 6th 2074</p>
           <img class="mini-blog-img" src="images/day-life-1.jpg" alt="a room" />
-          <div>
+          <div class="get-stacked centered-stack">
             <p>
               The world outside may be a shadow of its former self, post-climate
               disaster, but inside my small abode, hope and positivity reign.
@@ -182,7 +193,7 @@
           </h2>
           <p class="publish-date">Published: January 13th 2074</p>
           <img class="mini-blog-img" src="images/survive-1.jpg" alt="a woman" />
-          <div>
+          <div class="get-stacked centered-stack">
             <p>
               As dawn breaks in the year 2074, amidst the remnants of a world
               reshaped by a climate catastrophe, wellness practices have taken a
@@ -200,7 +211,7 @@
           <h2>Navigating a Mutant-Filled World: Safety and Wellness Tips</h2>
           <p class="publish-date">Published: January 20th 2074</p>
           <img class="mini-blog-img" src="images/mutant-1.jpg" alt="a room" />
-          <div>
+          <div class="get-stacked centered-stack">
             <p>
               Amidst the backdrop of decaying urban sprawl and mutant threats,
               survival takes on a new meaning. This post will delve into
