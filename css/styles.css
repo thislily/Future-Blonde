@@ -814,6 +814,10 @@ textarea {
 @media screen and (max-width: 900px) {
   /* universal */
 
+  main{
+    margin-top: 112px;
+  }
+
   .get-stacked {
     flex-direction: column;
   }
