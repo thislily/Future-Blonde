@@ -21,3 +21,22 @@ document.addEventListener("click", (e) => {
 hamburger.addEventListener("click", (e) => {
   e.stopPropagation();
 });
+
+
+let lastScrollY = window.scrollY;
+
+window.addEventListener("scroll", () => {
+  const currentScrollY = window.scrollY;
+
+  if (currentScrollY > lastScrollY) {
+    // Scrolling down
+    document.querySelector('.navbar').classList.add('navbar-hidden');
+  } else {
+    // Scrolling up
+    document.querySelector('.navbar').classList.remove('navbar-hidden');
+  }
+
+  // Update the last scroll position
+  lastScrollY = currentScrollY;
+});
+

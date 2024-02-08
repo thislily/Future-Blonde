@@ -221,12 +221,17 @@ footer {
   background-color: var(--clr-melon);
 }
 
-header {
+.navbar {  
   z-index: 12;
   position: fixed;
   top: 0px;
   box-shadow: var(--bs-shadow-light);
+  transition: top 0.3s;
 }
+
+/* Class to apply when hiding the navbar */
+
+
 
 header .dark-button{
   z-index: 12;
@@ -845,6 +850,10 @@ textarea {
 
   header, .max-width{
     height: 80px;
+  }
+
+  .navbar-hidden {
+    top: -96px; /* Adjust based on the actual height of your navbar */
   }
 
   .text-logo{
