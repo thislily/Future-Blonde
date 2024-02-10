@@ -1142,12 +1142,18 @@ textarea {
   }
   /* blog */
   .blog-filter {
-    max-width: 352px;
+    max-width: 400px;
+    margin-left: 0px;
   }
 
   .blog-grid {
     gap: 16px;
     margin-top: 32px;
+  }
+
+  .blog-grid .thumbnail{
+    width: 100%;
+    max-width: 400px;
   }
 
   .scroller-buttons{
@@ -1175,6 +1181,10 @@ textarea {
   /* blog */
   .thumbnail {
     width: 288px;
+  }
+
+  .blog-grid .thumbnail{
+    width: 100%;
   }
 
   .select-filter {
