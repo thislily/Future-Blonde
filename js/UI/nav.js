@@ -1,6 +1,6 @@
 
 
-function handleNav(){
+export function handleNav(){
 
   const hamburger = document.querySelector(".hamburger");
   const navMenu = document.querySelector(".nav-menu");
@@ -42,5 +42,3 @@ function handleNav(){
   });
     
 }
-
-export {handleNav}

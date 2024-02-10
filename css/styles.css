@@ -12,16 +12,17 @@ TABLE OF CONTENTS
 /* 1. UNIVERSAL*/
 
 :root {
-  --clr-white: #ffffff;
-  --clr-light-grey: #e2e2e2;
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-light-grey: #e3e3e3;
   --clr-med-grey: #757575;
-  --clr-black: #000000;
+  --clr-black: hsl(0, 0%, 0%);
 
-  --clr-soft-black: #17181e;
-  --clr-deep-teal: #31505d;
-  --clr-melon: #edb8a5;
-  --clr-tan: #cdad97;
-  --clr-bone: #eee5d8;
+  --clr-soft-black: hsl(231, 13%, 10%);
+  --clr-deep-teal: hsl(198, 31%, 28%);
+  --clr-melon: hsl(16, 67%, 79%);
+  --clr-tan: hsl(24, 35%, 70%);
+  --clr-bone: hsl(35, 39%, 89%);
+  --clr-crimson: hsl(0, 60%, 53%);
 
   --bs-shadow: 0px 4px 6px hsla(0, 0%, 0%, 0.25);
   --bs-shadow-light: 0px 4px 6px hsla(0, 0%, 0%, 0.05);
@@ -82,7 +83,7 @@ i {
 
 .spacing-line {
   height: 4px;
-  width: 96%;
+  width: 90%;
   max-width: 1216px;
   background-color: var(--clr-tan);
   border-radius: 25px;
@@ -222,7 +223,7 @@ footer {
   background-color: var(--clr-melon);
 }
 
-.navbar {  
+.navbar {
   z-index: 12;
   position: fixed;
   top: 0px;
@@ -230,11 +231,7 @@ footer {
   transition: top 0.3s;
 }
 
-/* Class to apply when hiding the navbar */
-
-
-
-header .dark-button{
+header .dark-button {
   z-index: 12;
 }
 
@@ -282,7 +279,7 @@ nav {
   margin-left: var(--spc-med);
 }
 
-.nav-link{
+.nav-link {
   transition: 0.5s ease;
 }
 
@@ -317,20 +314,130 @@ footer img {
   background-color: var(--clr-soft-black);
 }
 
+
+/* LOADER */
+
+.loader {
+  width: 120px;
+  height: 22px;
+  border-radius: 20px;
+  color: var(--clr-deep-teal);
+  border: 2px solid;
+  position: relative;
+  margin: 80px auto;
+}
+.loader::before {
+  content: "";
+  position: absolute;
+  margin: 2px;
+  inset: 0 100% 0 0;
+  border-radius: inherit;
+  background: currentColor;
+  animation: l6 2s infinite;
+}
+@keyframes l6 {
+    100% {inset:0}
+}
+
+
+/* ERROR MESSAGE */
+
+.error-message {
+  height: min-content;
+  background-color: var(--clr-white);
+  width: 80%;
+  max-width: 600px;
+  border: 4px solid var(--clr-crimson);
+  color: var(--clr-black);
+  padding: var(--spc-med) var(--spc-small);
+  margin: var(--spc-big) auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.error-message h1 {
+  font-family: var(--font-body);
+  font-weight: var(--fw-semi-bold);
+  font-size: var(--fs-h1-reg);
+  color: var(--clr-soft-black);
+  text-align: center;
+  margin-bottom: var(--spc-small);
+}
+
+.error-message div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spc-small);
+}
+
+.error-message p {
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-light);
+}
+
+.error-message img {
+  height: 80px;
+}
+
+.error-message a {
+  color: var(--clr-crimson);
+  font-weight: var(--fw-semi-bold);
+  text-decoration: underline;
+}
+
+/* LIGHTBOX */
+
+.image{
+  cursor: pointer;
+}
+
+#lightbox {
+  position: fixed;
+  z-index: 1000;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+#lightbox.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: none;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border: 8px var(--clr-white) solid;
+}
+
+.close-LB{
+margin: -8px 0px 0px;
+}
+
 /* HOME */
 
 .front-splash {
   width: 100%;
   max-width: 1280px;
-  margin: var(--spc-big) auto;
+  margin: 0px auto var(--spc-big);
   padding: 0px var(--spc-small);
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
 }
 
 .splash-title {
-  min-width: 368px;
+  width: 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -348,9 +455,10 @@ footer img {
   position: relative;
   display: inline-block;
   height: 448px;
+  width: 60%;
   max-width: 720px;
-  margin-right: var(--spc-med);
   overflow: hidden;
+  margin-right: var(--spc-med);
 }
 
 .splash-image {
@@ -824,7 +932,7 @@ textarea {
 @media screen and (max-width: 900px) {
   /* universal */
 
-  main{
+  main {
     margin-top: 96px;
   }
 
@@ -853,21 +961,22 @@ textarea {
 
   /* header */
 
-  header, .max-width{
+  header,
+  .max-width {
     height: 80px;
   }
 
   .navbar-hidden {
-    top: -96px; /* Adjust based on the actual height of your navbar */
+    top: -96px;
   }
 
-  .text-logo{
+  .text-logo {
     display: none;
   }
 
   .hamburger {
     display: block;
-    margin-top: 16px;
+    margin-top: 20px;
   }
 
   .hamburger.active .bar:nth-child(2) {
@@ -895,7 +1004,7 @@ textarea {
     width: 100%;
     text-align: center;
     transition: 0.5s;
-    box-shadow: var(--bs-shadow-light) ;
+    box-shadow: var(--bs-shadow-light);
   }
 
   .nav-item {
@@ -910,6 +1019,7 @@ textarea {
   .front-splash {
     margin: 0px auto;
     padding: 0px;
+    align-items: center;
   }
 
   .ca-button {
@@ -949,6 +1059,10 @@ textarea {
     width: 100%;
     max-width: 600px;
     gap: var(--spc-small);
+  }
+
+  .about-top-centered h2 {
+    margin-top: var(--spc-small);
   }
 
   .about-me img {
@@ -1002,7 +1116,7 @@ textarea {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 735px) {
   /* universal */
   :root {
     --fs-h1-big: 32px;
@@ -1042,5 +1156,9 @@ textarea {
   /* blog */
   .thumbnail {
     width: 100%;
+  }
+
+  .select-filter {
+    margin-left: 16px;
   }
 }
