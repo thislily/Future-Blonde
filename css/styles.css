@@ -1150,6 +1150,10 @@ textarea {
     margin-top: 32px;
   }
 
+  .scroller-buttons{
+    display: none;
+  }
+
   .title {
     margin: 0px auto;
     width: 260px;
@@ -1170,7 +1174,7 @@ textarea {
 @media screen and (max-width: 420px) {
   /* blog */
   .thumbnail {
-    width: 100%;
+    width: 288px;
   }
 
   .select-filter {
