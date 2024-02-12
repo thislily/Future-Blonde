@@ -16,8 +16,9 @@ export async function getPost() {
     postContainer.innerHTML = displayError(
       `We couldn't find the post you were looking for, <a href="../../html/contact-us.html">contact us</a> for more info.`
     );
-    loader.classList.remove("loader");
+    
   }
+  loader.classList.remove("loader");
 }
 
 //display item details
@@ -29,7 +30,7 @@ export async function displayPost(data) {
   ${data.content.rendered}`;
 
   postContainer.innerHTML = postHTML;
-
+  
 
 }
 

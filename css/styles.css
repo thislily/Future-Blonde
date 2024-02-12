@@ -126,10 +126,6 @@ p {
   line-height: 120%;
 }
 
-.publish-date {
-  font-style: italic;
-}
-
 h2 {
   font-family: var(--font-body);
   font-size: var(--fs-h2);
@@ -1017,6 +1013,7 @@ textarea {
   /* header */
 
   header,
+  footer, 
   .max-width {
     height: 80px;
   }
@@ -1073,6 +1070,10 @@ textarea {
 
   .nav-menu.active {
     top: 80px;
+  }
+
+  footer p{
+    margin: 8px 0px 8px 8px;
   }
 
   /* home */

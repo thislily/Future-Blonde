@@ -14,7 +14,7 @@ export async function createMiniArticleHTML(post) {
     />
     <div class="get-stacked centered-stack">
     ${post.excerpt.rendered}
-      <a href="html/post/index.html" class="pink-button"
+      <a href="/html/post/?id=${post.id}" class="pink-button"
         >Read More<i class="fas fa-chevron-right"></i
       ></a>
     </div>
