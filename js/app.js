@@ -23,15 +23,10 @@ if (
   blogPage();
 }
 
-// if(
-//   location.pathname ==="/index.html" ||
-//   location.pathname ==="/index"
-// ){
-// miniBlog();
-// }
-
-if (location.pathname === "/html/blog.html" ||
-    location.pathname === "/html/blog"){
-      blogPage();
-      seeMorePosts();
-    }
+if (
+  location.pathname === "/html/blog.html" ||
+  location.pathname === "/html/blog"
+) {
+  blogPage();
+  seeMorePosts();
+}
