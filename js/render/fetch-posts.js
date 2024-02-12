@@ -35,7 +35,8 @@ export async function displayPosts(data) {
     createThumbnailHTML(data[i]);
     if (blogGrid) {
       blogGrid.innerHTML += thumbnailHTML;
-      loader.classList.remove("loader")
+      loader.classList.remove("loader");
+      console.log(data[i].id);
     }
 
     if (scroller) {
@@ -72,19 +73,3 @@ export function seeMorePosts() {
       displayPosts(posts);
     });
 }
-
-
-// // Simplified function to fetch and display the first page of posts
-// export async function miniBlog() {
-//   try {
-//     const response = await fetch(`${url}&page=1&per_page=9`); // Adjust per_page as needed
-//     const posts = await response.json();
-
-//     // Simplify the display function to just log out posts or show titles
-//     posts.forEach(post => {
-//       console.log(post.title.rendered); // Just log titles to ensure fetching works
-//     });
-//   } catch (error) {
-//     console.error('Fetching posts failed:', error);
-//   }
-// }

@@ -17,7 +17,7 @@ export function handleScroller(){
     });
 
 
-    //Chat GPT code tutor reeeally helped with this because I could not figure it out no matter what I did.  At some point I just decided I wanted to know the answer more than I wanted to figure it out myself.
+    //Chat GPT Code Tutor reeeally helped with this because I could not figure it out no matter what I did.  At some point I just decided I wanted to know the answer more than I wanted to figure it out myself.
     document.querySelector('.scroller').addEventListener('wheel', function(e) {
         // Check if the wheel event is primarily vertical
         if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
