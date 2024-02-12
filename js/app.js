@@ -12,12 +12,17 @@ document.addEventListener("DOMContentLoaded", () => {
 if (
   location.pathname === "/html/about.html" ||
   location.pathname === "/html/about" ||
-  location.pathname === "/index" ||
+  location.pathname === "/index.html" ||
   location.pathname === "/html/contact.html" ||
   location.pathname === "/html/contact" ||
   location.pathname === "/html/post/index.html" ||
   location.pathname === "/html/post/index"
 ) {
+  handleScroller();
+  blogPage();
+}
+
+if (location.pathname === "/index"){
   handleScroller();
   blogPage();
 }
