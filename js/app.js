@@ -1,6 +1,6 @@
 import { createLightbox } from "./UI/lightbox.js";
 import { handleNav } from "./UI/nav.js";
-import { handleScroller } from "./UI/scroller.js";
+import { handleScroller, scroller } from "./UI/scroller.js";
 import { blogPage, getPosts, seeMorePosts } from "./render/fetch-posts.js";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -27,10 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
 //   blogPage();
 // }
 
-if (
-  location.pathname !== "/html/blog.html" ||
-  location.pathname !== "/html/blog"
-) {
+if (scroller) {
   handleScroller();
 }
 
@@ -40,5 +37,3 @@ if (
 ) {
   seeMorePosts();
 }
-
-
