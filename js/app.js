@@ -7,30 +7,38 @@ document.addEventListener("DOMContentLoaded", () => {
   handleNav();
   createLightbox();
   getPosts();
+  blogPage();
 });
 
+// if (
+//   location.pathname === "/html/about.html" ||
+//   location.pathname === "/html/about" ||
+//   location.pathname === "/html/contact.html" ||
+//   location.pathname === "/html/contact" ||
+//   location.pathname === "/html/post/index.html" ||
+//   location.pathname === "/html/post/index"
+// ) {
+//   handleScroller();
+//   blogPage();
+// }
+
+// if (location.pathname === "/" || location.pathname === "/index.html") {
+//   handleScroller();
+//   blogPage();
+// }
+
 if (
-  location.pathname === "/html/about.html" ||
-  location.pathname === "/html/about" ||
-  location.pathname === "/html/contact.html" ||
-  location.pathname === "/html/contact" ||
-  location.pathname === "/html/post/index.html" ||
-  location.pathname === "/html/post/index"
+  location.pathname !== "/html/blog.html" ||
+  location.pathname !== "/html/blog"
 ) {
   handleScroller();
-  blogPage();
 }
-
-if (location.pathname === "/" || location.pathname === "/index.html") {
-  handleScroller();
-  blogPage();
-}
-
 
 if (
   location.pathname === "/html/blog.html" ||
   location.pathname === "/html/blog"
 ) {
-  blogPage();
   seeMorePosts();
 }
+
+
