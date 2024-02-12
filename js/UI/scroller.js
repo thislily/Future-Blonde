@@ -1,8 +1,8 @@
-export function handleScroller(){
-    const next = document.getElementById("next");
-    const back = document.getElementById("back");
-    const scroller = document.querySelector(".scroller");
+export const scroller = document.querySelector(".scroller");
+const next = document.getElementById("next");
+const back = document.getElementById("back");
 
+export function handleScroller(){
     next.addEventListener("click", () => {
         const maxScrollLeft = scroller.scrollWidth - scroller.clientWidth;
         if (scroller.scrollLeft < maxScrollLeft) {

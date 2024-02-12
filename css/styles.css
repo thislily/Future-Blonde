@@ -246,12 +246,19 @@ header .dark-button {
   background-color: var(--clr-melon);
 }
 
+.mask-logo{
+  height: 64px;
+  margin: 12px;
+}
+
 .home-link {
   display: flex;
   flex-direction: row;
   align-items: end;
   z-index: 12;
 }
+
+
 
 .text-logo {
   max-height: 28px;
@@ -317,7 +324,7 @@ footer img {
 
 /* LOADER */
 
-/* https://css-loaders.com/progress/ */
+/* Found at: https://css-loaders.com/progress/ */
 
 .loader {
   width: 120px;
@@ -386,7 +393,7 @@ footer img {
 }
 
 .error-message a {
-  color: var(--clr-crimson);
+  color: var(--clr-deep-teal);
   font-weight: var(--fw-semi-bold);
   text-decoration: underline;
 }
@@ -543,12 +550,13 @@ margin: -8px 0px 0px;
   gap: 16px;
   border-right: 16px solid var(--clr-tan);
   border-left: 16px solid var(--clr-tan);
+  cursor: pointer;
 
 }
 
 .thumbnail {
   width: 320px;
-  height: min-content;
+  height: 496px;
   overflow-y: hidden;
   background-color: var(--clr-deep-teal);
   color: var(--clr-white);
@@ -590,6 +598,7 @@ margin: -8px 0px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
 }
 
 .select-wrapper {
@@ -620,6 +629,18 @@ margin: -8px 0px 0px;
   cursor: pointer;
 }
 
+.blog-grid-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: start;
+  justify-content: center;
+  width: 100%;
+  max-width: 1120px;
+  margin: 0px auto;
+  padding: 0px;
+}
+
 .blog-filter {
   display: flex;
   flex-direction: row;
@@ -627,8 +648,9 @@ margin: -8px 0px 0px;
   max-width: 1152px;
   justify-content: space-between;
 }
+
 .blog-filter .white-button {
-  margin: 0px;
+  margin: 0px 0px var(--spc-small);
 }
 
 .blog-grid {
@@ -678,6 +700,14 @@ margin: -8px 0px 0px;
 }
 
 /* MINI-BLOG & BLOG POSTS */
+
+.mini-blog{
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
 
 .mini-blog-container {
   width: 100%;
@@ -932,6 +962,7 @@ textarea {
   /* blog */
   .blog-filter {
     max-width: 736px;
+    margin-bottom: var(--spc-small);
   }
 
   .blog-filter .white-button {
@@ -987,6 +1018,11 @@ textarea {
 
   .text-logo {
     display: none;
+  }
+
+  .mask-logo{
+    height: 48px;
+    margin: 16px;
   }
 
   .hamburger {
@@ -1099,6 +1135,10 @@ textarea {
     margin: 0px auto;
   }
 
+  .mini-blog-container article{
+    padding: var(--spc-small);
+  }
+
   .post p,
   .post h2,
   .post h1 {
@@ -1143,17 +1183,18 @@ textarea {
   /* blog */
   .blog-filter {
     max-width: 400px;
-    margin-left: 0px;
+    margin: var(--spc-small) 0px ;
+
   }
 
   .blog-grid {
     gap: 16px;
-    margin-top: 32px;
   }
 
   .blog-grid .thumbnail{
     width: 100%;
     max-width: 400px;
+    height: 432px;
   }
 
   .scroller-buttons{

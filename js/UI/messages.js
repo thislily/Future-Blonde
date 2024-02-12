@@ -4,7 +4,7 @@ export function displayError(message = "Unknown error") {
     <h1>Oops! Something has gone wrong!</h1>
     <div>
       <img src="../../images/uh-oh.svg" alt="a cute shocked mutant" />
-      <p>"${message}"</p>
+      <p>${message}</p>
     </div>
   </div>`;
 }
