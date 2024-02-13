@@ -6,13 +6,13 @@ export function handleScroller(){
     next.addEventListener("click", () => {
         const maxScrollLeft = scroller.scrollWidth - scroller.clientWidth;
         if (scroller.scrollLeft < maxScrollLeft) {
-            scroller.scrollBy({ left: 368, behavior: 'smooth' });
+            scroller.scrollBy({ left: 352, behavior: 'smooth' });
         }
     });
 
     back.addEventListener("click", () => {
         if (scroller.scrollLeft > 0) {
-            scroller.scrollBy({ left: -368, behavior: 'smooth' });
+            scroller.scrollBy({ left: -352, behavior: 'smooth' });
         }
     });
 
