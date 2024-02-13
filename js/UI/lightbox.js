@@ -1,4 +1,3 @@
-
 //Create image modal on click of all images containing class "image"
 
 //This video was very helpful! "https://www.youtube.com/watch?v=uKVVSwXdLr0"
@@ -14,7 +13,9 @@ export function createLightbox() {
       lightbox.classList.add("active");
       const img = document.createElement("img");
       const closeLB = document.createElement("button");
+
       img.src = image.src;
+
       closeLB.classList.add("white-button", "close-LB");
       closeLB.innerHTML = "Close <i class='fa fa-times'></i>";
 

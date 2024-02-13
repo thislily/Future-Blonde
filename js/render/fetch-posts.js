@@ -2,6 +2,8 @@ import { displayError } from "../UI/messages.js";
 import { createThumbnailHTML, thumbnailHTML } from "./create-thumbnail.js";
 import { scroller } from "../UI/scroller.js";
 import { createMiniArticleHTML, miniArticleHTML, miniBlogContainer } from "./create-mini-blog.js";
+import { createLightbox } from "../UI/lightbox.js";
+
 
 
 //recieve all products from API
@@ -36,7 +38,6 @@ export async function displayPosts(data) {
     if (blogGrid) {
       blogGrid.innerHTML += thumbnailHTML;
       loader.classList.remove("loader");
-      console.log(data[i].id);
     }
 
     if (scroller) {
@@ -50,18 +51,19 @@ export async function displayPosts(data) {
       miniBlogContainer.innerHTML += miniArticleHTML;
     }
   }
-
   loader.classList.remove("loader")
 
 
   if (currentPage >= maxPagesToShow) {
     document.getElementById("see-more-posts").style.display = "none";
   }
+
 }
 
 export async function blogPage() {
   const posts = await getPosts(currentPage);
   displayPosts(posts);
+  createLightbox();
 }
 
 export function seeMorePosts() {

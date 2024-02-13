@@ -271,7 +271,6 @@ header .max-width{
 
 footer p {
   margin-left: var(--spc-small);
-  margin-right: var(--spc-small);
   max-width: 160px;
 }
 
@@ -476,11 +475,13 @@ margin: -8px 0px 0px;
   margin-right: var(--spc-med);
 }
 
-.splash-image {
+.slide {
   display: block;
-  object-fit: cover;
+  background-size: cover;
+  background-position: center;
   width: 100%;
   height: 100%;
+
 }
 
 .splash-image-controller {
@@ -518,7 +519,7 @@ margin: -8px 0px 0px;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.6);
   opacity: 0;
   transition: opacity 0.5s ease;
   display: flex;
@@ -532,9 +533,10 @@ margin: -8px 0px 0px;
 
 .overlay-text {
   color: white;
-  font-size: 20px;
+  font-size: var(--fs-h1-reg);
   padding: var(--spc-small);
   text-align: center;
+  width: 80%;
 }
 
 /* BLOG GRID, SCROLLER & THUMBNAILS */
@@ -1073,6 +1075,7 @@ textarea {
   }
 
   footer p{
+    padding: none;
     margin: 8px 0px 8px 8px;
   }
 
@@ -1155,6 +1158,10 @@ textarea {
     width: 90%;
   }
 
+  .post img{
+    max-height: 500px;
+    object-position: top;
+  }
   /* subscribe & contact */
 
   input,

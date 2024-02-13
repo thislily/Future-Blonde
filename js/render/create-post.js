@@ -1,3 +1,5 @@
+import { createLightbox } from "../UI/lightbox.js";
+
 
 
 const postContainer = document.querySelector(".post");
@@ -6,6 +8,7 @@ const params = new URLSearchParams(queryString);
 const id = params.get("id");
 const anotherURL = "https://www.rainy-lily-days.one/wp-json/wp/v2/posts/"
 const postURL = anotherURL + id
+const currentBreadcrumb = document.getElementById("current-breadcrumb");
 
 export async function getPost() {
   try {
@@ -30,12 +33,23 @@ export async function displayPost(data) {
   ${data.content.rendered}`;
 
   postContainer.innerHTML = postHTML;
-  
 
+  let currentBreadcrumbPost = document.querySelector(".post p")
+  currentBreadcrumb.innerText = currentBreadcrumbPost.textContent;
+
+  const postImages = document.querySelectorAll(".wp-block-image img");
+
+  postImages.forEach((post) => {
+    post.classList.add("image");
+  })
+
+ 
 }
 
 //function runs on page load
 export async function postPage() {
   const post = await getPost();
   displayPost(post);
+ 
+  
 }
