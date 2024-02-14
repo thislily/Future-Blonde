@@ -1,9 +1,13 @@
-import { createLightbox } from "./UI/lightbox.js";
+
 import { handleNav } from "./UI/nav.js";
 import { handleScroller, scroller } from "./UI/scroller.js";
 import { handleCarousel } from "./render/create-carousel.js";
 import { blogPage, getPosts, seeMorePosts } from "./render/fetch-posts.js";
 import { postPage } from "./render/create-post.js";
+import { createLightbox } from "./UI/lightbox.js";
+if (location.pathname === "/" || location.pathname === "/index.html") {
+  handleCarousel();
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   handleNav();
@@ -20,6 +24,7 @@ if (
   location.pathname === "/html/blog"
 ) {
   seeMorePosts();
+
 }
 
 if (
@@ -27,8 +32,6 @@ if (
   location.pathname === "/html/post/?"
 ) {
   postPage();
+  createLightbox();
 }
 
-if (location.pathname === "/" || location.pathname === "/index.html") {
-  handleCarousel();
-}

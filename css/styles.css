@@ -110,7 +110,7 @@ i {
   color: var(--clr-soft-black);
 }
 
-#current-breadcrumb {
+.breadcrumbs a {
   text-decoration: underline;
 }
 
@@ -659,6 +659,7 @@ footer img {
   width: 100%;
   max-width: 1152px;
   justify-content: space-between;
+  margin-bottom: var(--spc-small);
 }
 
 .blog-filter .white-button {
