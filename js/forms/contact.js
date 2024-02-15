@@ -145,10 +145,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const appPassword = 'PDLu muwQ 60pK aiXp Exis oKfc';
       const encodedCredentials = btoa(`${username}:${appPassword}`);
       
-      fetch(`https://www.rainy-lily-days.one/wp-json/contact-form-7/v1/contact-forms/281`, {
+      fetch(`https://www.rainy-lily-days.one/wp-json/contact-form-7/v1/contact-forms/281/feedback`, {
         method: 'POST',
         body: formData,
         headers: {
+            'access-control-allow-origin': *
           'Authorization': `Basic ${encodedCredentials}`,
         },
       })
