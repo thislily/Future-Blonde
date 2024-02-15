@@ -159,13 +159,31 @@
       <section class="subscribe-container">
         <p>Join the Survival Squad!</p>
         <h2>Subscribe Now</h2>
-        <form id="subscibe-form">
-          <label for="first-name">First Name*</label>
-          <input type="text" id="first-name" name="first-name" />
-          <label for="last-name">Last Name</label>
-          <input type="text" id="last-name" name="last-name" />
-          <label for="email">Email*</label>
-          <input type="email" id="email" name="email" />
+        <div class="message-container-subscribe"></div>
+        <form id="subscribe-form">
+          <div>
+            <label for="subscribe-name"
+              >Name
+              <input
+                type="text"
+                id="subscribe-name"
+                name="subscribe-name"
+                autocomplete="name"
+              />
+            </label>
+          </div>
+
+          <div>
+            <label for="subscribe-email"
+              >Email
+              <input
+                type="email"
+                id="subscribe-email"
+                name="subscribe-email"
+                autocomplete="email"
+              />
+            </label>
+          </div>
           <button type="submit" class="dark-button" id="subscribe-submit">
             Subscribe
           </button>
