@@ -151,10 +151,6 @@ document.addEventListener('DOMContentLoaded', () => {
         headers: {
           'Authorization': `Basic ${encodedCredentials}`,
         },
-
-      for (var pair of formData.entries()) {
-        console.log(pair[0]+ ', ' + pair[1]); 
-    }
       })
 
     
