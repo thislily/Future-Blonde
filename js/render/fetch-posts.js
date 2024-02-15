@@ -203,12 +203,15 @@ export function filterPosts(){
 
 // display the select element with category options
 export function displayCategories() {
-  const selectFilter = document.getElementById("filter");
+  if (location.pathname === "/html/blog.html" || "/html/blog"){
+      const selectFilter = document.getElementById("filter");
   for (const [key, value] of Object.entries(categoryMapping)) {
     const option = document.createElement("option");
     option.value = key;
     option.textContent = value;
     selectFilter.appendChild(option);
   }
+  }
+
 }
 
