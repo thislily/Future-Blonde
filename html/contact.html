@@ -82,30 +82,33 @@
       </p>
 
       <section class="contact-container">
-        <h1>Let me know what's on your mind</h1>
+        <h1 id="contact-title">Let me know what's on your mind</h1>
+        <div class="message-container"></div>
+      
         <form class="contact-form get-stacked" action="">
           <div>
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" />
-            <label for="contact-email">Email</label>
-            <input type="email" id="contact-email" name="contact-email" />
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" />
+              <label for="your-name">Name
+                  <input type="text" id="your-name" name="your-name" autocomplete="name" />
+              </label>
+        
+              <label for="your-email">Email
+                  <input type="email" id="your-email" name="your-email" autocomplete="email" />
+              </label>
+         
+              <label for="subject">Subject
+                  <input type="text" id="subject" name="subject" />
+              </label>
           </div>
           <div>
-            <label for="message">Send us a message</label>
-            <textarea
-              name="message"
-              id="message"
-              cols="30"
-              rows="10"
-              placeholder="message here"
-            ></textarea>
-            <button type="submit" class="dark-button" id="message-submit">
-              Submit
-            </button>
+              <label for="message">Message (optional)
+                  <textarea id="message" name="message" cols="30" rows="10" placeholder="message here"></textarea>
+              </label>
+          
+              <button type="submit" class="dark-button" id="message-submit">Submit</button>
           </div>
-        </form>
+      </form>
+
+      
       </section>
 
       <div class="spacing-line"></div>

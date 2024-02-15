@@ -184,7 +184,8 @@ export async function seeMorePosts() {
 
 // Add event listener to the select element for filtering
 export function filterPosts(){
-  document.getElementById("filter").addEventListener("change", async (event) => {
+  if (location.pathname === "/html/blog.html" || "/html/blog"){
+      document.getElementById("filter").addEventListener("change", async (event) => {
     const selectedCategory = event.target.value;
     let filteredPosts = []; // Initialize an array to store filtered posts
     if (selectedCategory === "all") {
@@ -196,6 +197,8 @@ export function filterPosts(){
     }
     displayPosts(filteredPosts);
   });
+  }
+
 }
 
 // display the select element with category options

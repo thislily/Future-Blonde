@@ -5,6 +5,7 @@ import { handleCarousel } from "./render/create-carousel.js";
 import { blogPage, getPosts, seeMorePosts } from "./render/fetch-posts.js";
 import { postPage } from "./render/create-post.js";
 import { createLightbox } from "./UI/lightbox.js";
+import { handleContactForm } from "./forms/contact.js";
 if (location.pathname === "/" || location.pathname === "/index.html") {
   handleCarousel();
 }
@@ -24,7 +25,6 @@ if (
   location.pathname === "/html/blog"
 ) {
   seeMorePosts();
-
 }
 
 if (
@@ -35,3 +35,9 @@ if (
   createLightbox();
 }
 
+if (
+  location.pathname === "/html/contact.html" ||
+  location.pathname === "/html/contact"
+) {
+  handleContactForm();
+}
