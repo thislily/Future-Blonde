@@ -184,8 +184,10 @@ export async function seeMorePosts() {
 
 // Add event listener to the select element for filtering
 export function filterPosts(){
-  if (location.pathname === "/html/blog.html" || "/html/blog"){
-      document.getElementById("filter").addEventListener("change", async (event) => {
+  const filter = document.getElementById("filter");
+
+  if (filter){
+      filter.addEventListener("change", async (event) => {
     const selectedCategory = event.target.value;
     let filteredPosts = []; // Initialize an array to store filtered posts
     if (selectedCategory === "all") {
@@ -203,8 +205,9 @@ export function filterPosts(){
 
 // display the select element with category options
 export function displayCategories() {
-  if (location.pathname === "/html/blog.html" || "/html/blog"){
-      const selectFilter = document.getElementById("filter");
+  const selectFilter = document.getElementById("filter");
+
+  if (selectFilter){
   for (const [key, value] of Object.entries(categoryMapping)) {
     const option = document.createElement("option");
     option.value = key;
