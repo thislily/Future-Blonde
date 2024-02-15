@@ -149,7 +149,6 @@ document.addEventListener('DOMContentLoaded', () => {
         method: 'POST',
         body: formData,
         headers: {
-            'access-control-allow-origin': *
           'Authorization': `Basic ${encodedCredentials}`,
         },
       })
