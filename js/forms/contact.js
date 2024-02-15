@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // If all validations pass, proceed to submit the form data
       const formData = new FormData(form);
 
-      fetch(`https://www.rainy-lily-days.one/wp-json/contact-form-7/v1/contact-forms/bfd19a6/feedback`, {
+      fetch(`https://www.rainy-lily-days.one/wp-json/contact-form-7/v1/contact-forms/281/feedback`, {
         method: 'POST',
         body: formData, // FormData object automatically sets the Content-Type to multipart/form-data
       })
