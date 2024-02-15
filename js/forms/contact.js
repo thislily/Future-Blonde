@@ -53,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
       // If all validations pass, proceed to submit the form data
       const formData = new FormData(form);
+      formData.set("_wpcf7_unit_tag", "randomTagName");
   
 
   
