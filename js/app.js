@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   handleNav();
   getPosts();
   blogPage();
-  handleSubscribeForm();
+  // handleSubscribeForm();
 });
 
 if (scroller) {

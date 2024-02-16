@@ -825,6 +825,10 @@ article p {
   gap: var(--spc-med);
 }
 
+.subscribe-container{
+  gap: var(--spc-small);
+}
+
 .subscribe-container p {
   font-family: var(--font-header);
   font-size: var(--fs-h1-reg);
@@ -841,10 +845,33 @@ article p {
 
 form {
   width: 90%;
-  max-width: 400px;
+  max-width: 500px;
   display: flex;
   flex-direction: column;
   gap: var(--spc-small);
+}
+
+#mc_embed_signup_scroll{
+  display: flex;
+  flex-direction: column;
+  gap: var(--spc-small);
+  align-items: center;
+}
+
+.mce_inline_error, .response{
+  width: 100%;
+  height: 100%;
+  max-width: 364px;
+  font-family: var(--font-body);
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-semi-bold);
+  color: var(--clr-black);
+  padding: 0px;
+}
+
+.response {
+  padding:16px 8px;
+  border: 2px var(--clr-deep-teal) solid;
 }
 
 label {
@@ -861,13 +888,23 @@ textarea {
   border-radius: 0px;
   width: 100%;
   padding: 8px;
+  margin-top: 8px;
   font-family: var(--font-body);
   font-size: var(--fs-body);
   font-weight: var(--fw-reg);
 }
 
+.indicates-required{
+  width: auto;
+  padding: 0px;
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-reg);
+  margin: 0px auto;
+}
+
 textarea {
-  height: 102px;
+  height: 108px;
 }
 
 .subscribe-container button {
@@ -880,7 +917,7 @@ textarea {
 }
 
 .contact-container h1 {
-  margin-bottom: var(--spc-big);
+  
   max-width: 696px;
   text-align: center;
 }

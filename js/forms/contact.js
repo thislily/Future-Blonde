@@ -31,14 +31,14 @@ document.addEventListener('DOMContentLoaded', () => {
       }
   
       // Validate Subject
-      const subject = document.getElementById('subject').value;
+      const subject = document.getElementById('your-subject').value;
       if (subject.length <= 15) {
         isValid = false;
         errorMessage += 'Subject should be more than 15 characters long.<br>\n';
       }
   
       // Validate Message
-      const message = document.getElementById('message').value;
+      const message = document.getElementById('your-message').value;
       if (message.length <= 25) {
         isValid = false;
         errorMessage += 'Message content should be more than 25 characters long.<br>\n';
@@ -54,6 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // If all validations pass, proceed to submit the form data
       const formData = new FormData(form);
       formData.set("_wpcf7_unit_tag", "randomTagName");
+      formData.set("mc4wp_checkbox", "checked");
   
 
   
