@@ -1,5 +1,4 @@
-import { createLightbox } from "../UI/lightbox.js";
-
+import { displayComments } from "./create-comments.js";
 
 
 const postContainer = document.querySelector(".post");
@@ -50,6 +49,9 @@ export async function displayPost(data) {
 export async function postPage() {
   const post = await getPost();
   displayPost(post);
+  displayComments(id);
  
   
 }
+
+

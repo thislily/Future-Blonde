@@ -352,26 +352,28 @@ footer img {
 
 /* ERROR MESSAGE */
 
-.error-message, .happy-message {
+.error-message,
+.happy-message {
   height: min-content;
   background-color: var(--clr-white);
   width: 100%;
-  max-width: 1000px;
+  max-width: 800px;
   border: 4px solid var(--clr-crimson);
   color: var(--clr-black);
-  padding: var(--spc-med) var(--spc-small);
-  margin: var(--spc-big) auto;
+  padding: var(--spc-small);
+  margin: var(--spc-med) auto;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 
-.happy-message{
+.happy-message {
   border: 4px solid rgb(65, 106, 65);
 }
 
-.error-message h1, .happy-message h1 {
+.error-message h1,
+.happy-message h1 {
   font-family: var(--font-body);
   font-weight: var(--fw-semi-bold);
   font-size: var(--fs-h1-reg);
@@ -380,7 +382,8 @@ footer img {
   margin-bottom: var(--spc-small);
 }
 
-.error-message div , .happy-message div {
+.error-message div,
+.happy-message div {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -388,16 +391,19 @@ footer img {
   gap: var(--spc-small);
 }
 
-.error-message p, .happy-message p {
+.error-message p,
+.happy-message p {
   font-size: var(--fs-h2);
   font-weight: var(--fw-light);
 }
 
-.error-message img, .happy-message img {
+.error-message img,
+.happy-message img {
   height: 80px;
 }
 
-.error-message a , .happy-message a{
+.error-message a,
+.happy-message a {
   color: var(--clr-deep-teal);
   font-weight: var(--fw-semi-bold);
   text-decoration: underline;
@@ -807,15 +813,15 @@ article p {
   object-fit: cover;
 }
 
-.post .pink-button {
-  margin-left: auto;
-  margin-right: var(--spc-big);
+.centered-button {
+  margin: 16px auto;
 }
 
-/* SUBSCRIBE & CONTACT */
+/* SUBSCRIBE & CONTACT & COMMENTS*/
 
 .subscribe-container,
-.contact-container {
+.contact-container,
+.comments-container {
   padding: var(--spc-big) 0px;
   background-color: var(--clr-white);
   width: 100%;
@@ -825,11 +831,16 @@ article p {
   gap: var(--spc-med);
 }
 
-.subscribe-container{
+.subscribe-container {
   gap: var(--spc-small);
 }
 
-.subscribe-container p {
+.comments-container {
+  background-color: var(--clr-bone);
+}
+
+.subscribe-container p,
+.comments-container h2 {
   font-family: var(--font-header);
   font-size: var(--fs-h1-reg);
   color: var(--clr-soft-black);
@@ -851,14 +862,57 @@ form {
   gap: var(--spc-small);
 }
 
-#mc_embed_signup_scroll{
+#comments-form,
+.comment-box {
+  width: 100%;
+  max-width: 600px;
+  padding: 32px 48px 32px 32px;
+  border: 2px solid var(--clr-tan);
+  background-color: var(--clr-white);
+}
+
+#comments-form{
+  display: none;
+}
+
+#comment-submit {
+  margin: 0px auto;
+}
+
+.comment-box .bigger-p {
+  margin-top: 0px;
+  padding-top: 6px;
+}
+
+.comment-box .big-p {
+  margin: 8px 0px 0px;
+}
+
+.comment-box div {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 8px;
+}
+
+.comment-box i {
+  font-size: 32px;
+  color: var(--clr-deep-teal);
+}
+
+.comment-box #mc_embed_signup_scroll {
   display: flex;
   flex-direction: column;
   gap: var(--spc-small);
   align-items: center;
 }
 
-.mce_inline_error, .response{
+.mc-field-group {
+  padding-top: 16px;
+}
+
+.mce_inline_error,
+.response {
   width: 100%;
   height: 100%;
   max-width: 364px;
@@ -870,7 +924,7 @@ form {
 }
 
 .response {
-  padding:16px 8px;
+  padding: 16px 8px;
   border: 2px var(--clr-deep-teal) solid;
 }
 
@@ -894,7 +948,7 @@ textarea {
   font-weight: var(--fw-reg);
 }
 
-.indicates-required{
+.indicates-required {
   width: auto;
   padding: 0px;
   font-family: var(--font-body);
@@ -917,7 +971,6 @@ textarea {
 }
 
 .contact-container h1 {
-  
   max-width: 696px;
   text-align: center;
 }
@@ -1210,7 +1263,8 @@ textarea {
     max-height: 500px;
     object-position: top;
   }
-  /* subscribe & contact */
+
+  /* subscribe & contact & comments*/
 
   input,
   textarea {
@@ -1227,12 +1281,26 @@ textarea {
     width: 90%;
   }
 
-  .contact-form {
+  .contact-form,
+  #mc-embedded-subscribe-form {
     height: auto;
     gap: var(--spc-small);
     align-items: center;
     margin: 0px auto;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  #comments-form,
+  .comment-box {
     width: 90%;
+    max-width: 600px;
+    padding: 32px;
+  }
+
+  #mc-embedded-subscribe-form div {
+    margin: 8px;
+    padding: 0px;
   }
 }
 
@@ -1283,7 +1351,8 @@ textarea {
 
   /* messages */
 
-  .error-message, .happy-message{
+  .error-message,
+  .happy-message {
     width: 80%;
   }
 }

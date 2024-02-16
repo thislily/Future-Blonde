@@ -88,9 +88,65 @@
         <div class="loader"></div>
       </article>
 
-      <a href="/html/blog.html" class="pink-button about-top-centered"
+      <a href="/html/blog.html" class="pink-button centered-button"
         >See More Posts <i class="fas fa-chevron-right"></i
       ></a>
+
+      <section class="comments-container">
+        <h2>Community Comments</h2>
+
+        <div class="comment-box" id="show-comments-form-container">
+          <button id="show-comments-form" class="dark-button centered-button">Leave a Comment</button>
+        </div>
+        
+        <form action="" id="comments-form">
+          <label for="commenter-name"
+            >Name
+            <input
+              type="text"
+              id="commenter-name"
+              name="commenter-name"
+              placeholder="Must be more than 2 characters"
+            />
+          </label>
+
+          <label for="commenter-email"
+            >Email
+            <input
+              type="email"
+              id="commenter-email"
+              name="commenter-email"
+              placeholder="Must be valid email address"
+            />
+          </label>
+
+          <label for="comment"
+            >Comment
+            <textarea
+              id="comment"
+              name="comment"
+              cols="20"
+              rows="10"
+              placeholder="Remember to be nice, it's a rough world out there!"
+            ></textarea>
+          </label>
+
+          <button type="submit" class="dark-button" id="comment-submit">
+            Send
+          </button>
+          <div class="message-container"></div>
+        </form>
+        
+
+        <div class="comment-box">
+          <div>
+            <i class="fas fa-user-circle"></i>
+            <p class="bigger-p">Johnny Boy</p>
+          </div>
+
+          <p class="big-p">Here are my utmost thoughts and feelings!</p>
+        </div>
+      </section>
 
       <div class="spacing-line"></div>
       <section class="scroller-container">
@@ -192,7 +248,7 @@
                     type="submit"
                     name="subscribe"
                     id="mc-embedded-subscribe"
-                    class="dark-button"
+                    class="dark-button centered-button"
                     value="Subscribe"
                   />
                 </div>
