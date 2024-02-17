@@ -1,3 +1,4 @@
+//create thumnail html
 export let thumbnailHTML = "";
 
 export async function createThumbnailHTML(post) {

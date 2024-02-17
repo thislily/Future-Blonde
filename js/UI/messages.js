@@ -9,7 +9,7 @@ export function displayError(message = "Unknown error") {
   </div>`;
 }
 
-
+//create html to display when an a good thing occurs (this does happen on occasion)
 export function displayHappyMessage(message = "Things are going well!") {
   return `      <div class="happy-message">
   <h1>Hurray!</h1>

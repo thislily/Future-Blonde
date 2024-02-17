@@ -37,7 +37,6 @@ if (
   createLightbox();
   // leaveAComment();
   // handleCommentForm();
-
 }
 
 if (

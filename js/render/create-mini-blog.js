@@ -1,6 +1,7 @@
 export const miniBlogContainer = document.querySelector(".mini-blog-container");
 export let miniArticleHTML = "";
 
+//create html for mini articles for home page
 export async function createMiniArticleHTML(post) {
   let featuredImageURL = post._embedded["wp:featuredmedia"][0].source_url;
 

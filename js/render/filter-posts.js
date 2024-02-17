@@ -1,104 +1,46 @@
-// import { getPost } from "./create-post.js";
-// import { createThumbnailHTML, thumbnailHTML } from "./create-thumbnail.js";
-// import { blogGrid } from "./fetch-posts.js";
+import { allPosts, displayPosts } from "./fetch-posts.js";
 
-// // const seeLatestButton = document.getElementById("see-latest-button");
-// const filter = document.getElementById("filter");
+//map category numbers to category names (this was annoying, wish they would just list the names)
+const categoryMapping = {
+    1: "All Posts",
+    18: "Fashion",
+    19: "Lifestyle",
+    20: "Health",
+    21: "Survival"
+  };
 
-// //display only fashion category
-// export async function displayFashion(data) {
-//   blogGrid.innerHTML = "";
+// display the select element with category options
+export function displayCategories() {
+    const selectFilter = document.getElementById("filter");
+  
+    if (selectFilter){
+    for (const [key, value] of Object.entries(categoryMapping)) {
+      const option = document.createElement("option");
+      option.value = key;
+      option.textContent = value;
+      selectFilter.appendChild(option);
+    }
+    }
+  }
 
-//   for (let i = 0; i < data.length; i++) {
-//     const categories = data[i].categories;
-//     if (categories.includes(18)) { // Use includes() instead of contains()
-//       continue;
-//     }
-//     createThumbnailHTML(data[i]);
-//     blogGrid.innerHTML += thumbnailHTML;
-//   }
-//   loader.classList.remove("loader");
-// }
-
-// export async function fashion(){
-//     const posts = await getPosts();
-//     displayFashion(posts);
-//   }; 
-
-// //display only survival category
-// export async function displaySurvival(data) {
-//   blogGrid.innerHTML = "";
-
-//   for (let i = 0; i < data.length; i++) {
-//     const categories = data[i].categories;
-//     if (categories.includes(21)) { // Use includes() instead of contains()
-//       continue;
-//     }
-//     createThumbnailHTML(data[i]);
-//     blogGrid.innerHTML += thumbnailHTML;
-//   }
-//   loader.classList.remove("loader");
-// }
-
-// export async function survival(){
-//     const posts = await getPosts();
-//     displaySurvival(posts);
-//   }; 
-
-// export async function filterPosts(data) {
-//   const selectedIndex = filter.selectedIndex;
-//   if (selectedIndex === 2) {
-//     fashion();
-//   } else if (selectedIndex === 5) {
-//     survival();
-//   }
-// }
-
-
-
-
-
-
-// import { createThumbnailHTML, thumbnailHTML } from "./create-thumbnail.js";
-// import { blogGrid } from "./fetch-posts.js";
-
-// // const seeLatestButton = document.getElementById("see-latest-button");
-// const filter = document.getElementById("filter");
-
-// //display only fashion category
-// export async function displayFashion(data) {
-//   blogGrid.innerHTML = "";
-
-//   for (let i = 0; i < data.length; i++) {
-//     const categories = data[i].categories;
-//     if (categories.contains(18)) {
-//       continue;
-//     }
-//     createThumbnailHTML(data[i]);
-//     blogGrid.innerHTML += thumbnailHTML;
-//   }
-//   loader.classList.remove("loader");
-// }
-
-// //display only survival category
-// export async function displaySurvival(data) {
-//   blogGrid.innerHTML = "";
-
-//   for (let i = 0; i < data.length; i++) {
-//     const categories = data[i].categories;
-//     if (categories.contains(21)) {
-//       continue;
-//     }
-//     createThumbnailHTML(data[i]);
-//     blogGrid.innerHTML += thumbnailHTML;
-//   }
-//   loader.classList.remove("loader");
-// }
-
-// export async function filterPosts() {
-//   if (filter.options[2]) {
-//     displayFashion();
-//   } else if (filter.options[5]) {
-//     displaySurvival();
-//   }
-// }
+// Add event listener to the select element for filtering
+export function filterPosts(){
+    const filter = document.getElementById("filter");
+  
+    if (filter){
+        filter.addEventListener("change", async (event) => {
+      const selectedCategory = event.target.value;
+      let filteredPosts = []; // Initialize an array to store filtered posts
+      if (selectedCategory === "all") {
+        // If "All Posts" is selected, display all posts
+        filteredPosts = allPosts; // Use allPosts array for filtering
+      } else {
+        // Otherwise, filter posts based on the selected category
+        filteredPosts = allPosts.filter(post => post.categories.includes(parseInt(selectedCategory)));
+      }
+      displayPosts(filteredPosts);
+    });
+    }
+  }
+  
+  

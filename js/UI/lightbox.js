@@ -1,7 +1,9 @@
-//Create image modal on click of all images containing class "image"
+//create image modal on click of all images containing class "image"
 
-//This video was very helpful! "https://www.youtube.com/watch?v=uKVVSwXdLr0"
+//this video was very helpful! "https://www.youtube.com/watch?v=uKVVSwXdLr0"
 
+
+//all images with class "image" will be clickable modals.  modal closes either with button or clicking outside of image.
 export function createLightbox() {
   const lightbox = document.createElement("div");
   lightbox.id = "lightbox";

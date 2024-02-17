@@ -1,8 +1,13 @@
 import { displayError } from "../UI/messages.js";
 import { createThumbnailHTML, thumbnailHTML } from "./create-thumbnail.js";
 import { scroller } from "../UI/scroller.js";
-import { createMiniArticleHTML, miniArticleHTML, miniBlogContainer } from "./create-mini-blog.js";
+import {
+  createMiniArticleHTML,
+  miniArticleHTML,
+  miniBlogContainer,
+} from "./create-mini-blog.js";
 import { createLightbox } from "../UI/lightbox.js";
+import { displayCategories, filterPosts } from "./filter-posts.js";
 
 export const url = "https://www.rainy-lily-days.one/wp-json/wp/v2/posts?_embed";
 export const loader = document.querySelector(".loader");
@@ -11,17 +16,9 @@ const seeMorePostsButton = document.getElementById("see-more-posts");
 
 let currentPage = 1;
 const increasedPerPage = 100;
-let allPosts = []; // Track all loaded posts
+export let allPosts = [];
 
-// Mapping of category numbers to category names
-const categoryMapping = {
-  1: "All Posts",
-  18: "Fashion",
-  19: "Lifestyle",
-  20: "Health",
-  21: "Survival"
-};
-
+//fetch posts from page 1
 export async function getPosts(page = 1, perPage = 9) {
   const responseUrl = `${url}&page=${page}&per_page=${perPage}`;
   try {
@@ -37,85 +34,57 @@ export async function getPosts(page = 1, perPage = 9) {
   }
 }
 
+// display posts at various locations
 export async function displayPosts(data) {
-
-  if(blogGrid){
-      blogGrid.innerHTML = ""; // Clear the previous posts
+  if (blogGrid) {
+    blogGrid.innerHTML = "";
   }
 
+  //create thumbnails from posts data
   for (let i = 0; i < data.length; i++) {
     createThumbnailHTML(data[i]);
-    if(blogGrid){
+
+    //display posts to blog grid
+    if (blogGrid) {
       blogGrid.innerHTML += thumbnailHTML;
     }
 
+    //display posts to scroller
     if (scroller) {
       scroller.innerHTML += thumbnailHTML;
     }
-    
+
     loader.classList.remove("loader");
   }
 
+  //create mini articles from posts data
   for (let i = data.length - 1; i >= Math.max(data.length - 4, 0); i--) {
     createMiniArticleHTML(data[i]);
+
+    //display mini articles to mini blog area on home
     if (miniBlogContainer) {
       miniBlogContainer.innerHTML += miniArticleHTML;
     }
   }
   loader.classList.remove("loader");
-  }
+}
 
+//export function to app.js
 export async function blogPage() {
   const posts = await getPosts(currentPage);
-  allPosts.push(...posts); // Add newly loaded posts to allPosts array
+  allPosts.push(...posts);
   displayPosts(posts);
   createLightbox();
   filterPosts();
   displayCategories();
 }
 
+//display posts from page 1, but now its max per page is 100 (sort of cheating because there are not that many posts, so I just hide the "see more" button after)
 export async function seeMorePosts() {
-
-  seeMorePostsButton.addEventListener("click", async () =>{
-  currentPage = 1;
-  const posts = await getPosts(currentPage, increasedPerPage);
-  allPosts = [...posts];
-  displayPosts(posts);
-  seeMorePostsButton.style.display = "none";
-  })
-
-}
-
-// Add event listener to the select element for filtering
-export function filterPosts(){
-  const filter = document.getElementById("filter");
-
-  if (filter){
-      filter.addEventListener("change", async (event) => {
-    const selectedCategory = event.target.value;
-    let filteredPosts = []; // Initialize an array to store filtered posts
-    if (selectedCategory === "all") {
-      // If "All Posts" is selected, display all posts
-      filteredPosts = allPosts; // Use allPosts array for filtering
-    } else {
-      // Otherwise, filter posts based on the selected category
-      filteredPosts = allPosts.filter(post => post.categories.includes(parseInt(selectedCategory)));
-    }
-    displayPosts(filteredPosts);
+  seeMorePostsButton.addEventListener("click", async () => {
+    const posts = await getPosts(currentPage, increasedPerPage);
+    allPosts = [...posts];
+    displayPosts(posts);
+    seeMorePostsButton.style.display = "none";
   });
-  }
-}
-
-// display the select element with category options
-export function displayCategories() {
-  const selectFilter = document.getElementById("filter");
-
-  if (selectFilter){
-  for (const [key, value] of Object.entries(categoryMapping)) {
-    const option = document.createElement("option");
-    option.value = key;
-    option.textContent = value;
-    selectFilter.appendChild(option);
-  }
-  }
 }

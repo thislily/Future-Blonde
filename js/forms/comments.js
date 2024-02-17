@@ -1,9 +1,16 @@
+//I could for some reason display comments, and send it comments successfully, but when I tried to run both functions, it always fell apart.  After a couple days and frantic googling I just gave up. Hopefully can get some answers and go back to fix it later.  Everything below is kind of a mess because I had to give up in the middle of tearing it apart again.
+
+
+
+
+
+
+
 // import { displayError, displayHappyMessage } from "../UI/messages.js";
 
-// const username = 'rainy-lily-days.one'; // Your WordPress username
-// const applicationPassword = '8G6q 3N5e lagb 6nMx xiOr MFSL'; // Your WordPress Application Password
+// const username = 'rainy-lily-days.one';
+// const applicationPassword = '8G6q 3N5e lagb 6nMx xiOr MFSL';
 
-// // Combine username and password, then encode in Base64
 // const encodedCredentials = btoa(`${username}:${applicationPassword}`);
 
 // const commentsURL = "https://www.rainy-lily-days.one/wp-json/wp/v2/comments"
@@ -42,7 +49,7 @@
 //         method: "POST",
 //         headers: {
 //           "Content-Type": "application/json",
-//           "Authorization": `Basic ${encodedCredentials}`, // Use the encoded auth string here
+//           "Authorization": `Basic ${encodedCredentials}`, 
 //         },
 //         body: formData,
 //       })

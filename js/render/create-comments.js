@@ -1,3 +1,10 @@
+//I could for some reason display comments, and send it comments successfully, but when I tried to run both functions, it always fell apart.  After a couple days and frantic googling I just gave up. Hopefully can get some answers and go back to fix it later.  Everything below is kind of a mess because I had to give up in the middle of tearing it apart again.
+
+
+
+
+
+
 // export function leaveAComment() {
 //     document.body.addEventListener('click', function(event) {
 //         if (event.target.id === 'show-comments-form') {
@@ -9,7 +16,6 @@
 //       });
       
 //   }
-  
   
 
 // const commentsURL =
