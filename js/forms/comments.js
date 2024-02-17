@@ -8,15 +8,12 @@ const encodedCredentials = btoa(`${username}:${applicationPassword}`);
 
 const commentsURL = "https://www.rainy-lily-days.one/wp-json/wp/v2/comments"
 
-export function handleCommentForm() {
+export function handleCommentForm(id) {
   document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("comments-form");
     const messageContainer = document.querySelector('.message-container');
 
-    const urlParams = new URLSearchParams(window.location.search);
-    const postID = urlParams.get('id');
-
-    form.addEventListener("submit", function (e) {
+    form.addEventListener("", function (e) {
       e.preventDefault(); // Prevent the default form submission
 
       const name = document.getElementById("commenter-name").value.trim();
@@ -34,13 +31,11 @@ export function handleCommentForm() {
         return;
       }
 
-  
-
       const formData = JSON.stringify({
         author_name: name,
         author_email: email,
         content: comment,
-        post: postID,
+        post: id,
       });
 
       fetch(commentsURL, {
