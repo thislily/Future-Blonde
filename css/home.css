@@ -76,8 +76,8 @@ Table of Contents
   
   .circle {
     z-index: 12;
-    width: 20px;
-    height: 20px;
+    width: 32px;
+    height: 32px;
     border: 2px var(--clr-soft-black) solid;
     border-radius: 50%;
     background-color: var(--clr-white);
