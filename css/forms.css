@@ -28,7 +28,7 @@ Table of Contents
   background-color: var(--clr-bone);
 }
 
-.subscribe-container p,
+.subscribe-container h3,
 .comments-container h2 {
   font-family: var(--font-header);
   font-size: var(--fs-h1-reg);
