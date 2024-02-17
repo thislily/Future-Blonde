@@ -1,0 +1,210 @@
+/*
+Table of Contents
+
+1. Root
+2. Universal
+3. Text
+4. Buttons
+
+*/
+
+/* 1. ROOT*/
+
+:root {
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-light-grey: #e3e3e3;
+    --clr-med-grey: #757575;
+    --clr-black: hsl(0, 0%, 0%);
+  
+    --clr-soft-black: hsl(231, 13%, 10%);
+    --clr-deep-teal: hsl(198, 31%, 28%);
+    --clr-melon: hsl(16, 67%, 79%);
+    --clr-tan: hsl(24, 35%, 70%);
+    --clr-bone: hsl(35, 39%, 89%);
+    --clr-crimson: hsl(0, 60%, 53%);
+  
+    --bs-shadow: 0px 4px 6px hsla(0, 0%, 0%, 0.25);
+    --bs-shadow-light: 0px 4px 6px hsla(0, 0%, 0%, 0.05);
+  
+    --font-header: "Yeseva One", serif;
+    --font-body: "Josefin Sans", sans-serif;
+  
+    --fw-light: 300;
+    --fw-reg: 400;
+    --fw-semi-bold: 600;
+  
+    --fs-h1-big: 64px;
+    --fs-h1-reg: 32px;
+    --fs-h2: 20px;
+    --fs-body: 18px;
+  
+    --spc-big: 48px;
+    --spc-med: 32px;
+    --spc-small: 16px;
+  }
+
+  /* 2. UNIVERSAL */
+  
+  * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    scroll-behavior: smooth;
+    overscroll-behavior: none;
+  }
+  
+  body {
+    min-height: 100vh;
+    background-color: var(--clr-bone);
+    margin: auto;
+  }
+  
+  main {
+    margin: 144px auto 0px;
+    overflow: hidden;
+  }
+  
+  a,
+  button {
+    text-decoration: none;
+    font-family: var(--font-body);
+    color: var(--clr-soft-black);
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-semi-bold);
+  }
+  
+  i {
+    font-size: var(--fs-h2);
+    padding-bottom: 2px;
+  }
+  
+  .current-page {
+    text-decoration: underline;
+  }
+  
+  .spacing-line {
+    height: 4px;
+    width: 90%;
+    max-width: 1216px;
+    background-color: var(--clr-tan);
+    border-radius: 25px;
+    margin: var(--spc-big) auto;
+  }
+  
+  .breadcrumbs {
+    width: 100%;
+    max-width: 1248px;
+    margin: 0px auto;
+    padding-left: var(--spc-med);
+    transition: 0.5s ease;
+  }
+  
+  .breadcrumbs a,
+  #current-breadcrumb {
+    color: #31505d;
+    font-weight: var(--fw-semi-bold);
+    font-size: var(--fs-h2);
+    font-family: var(--font-body);
+  }
+  
+  .breadcrumbs a:hover {
+    color: var(--clr-soft-black);
+  }
+  
+  .breadcrumbs a {
+    text-decoration: underline;
+  }
+  
+  /* 3. TEXT */
+  
+  p {
+    font-family: var(--font-body);
+    font-size: var(--fs-body);
+    font-weight: var(--fw-light);
+    color: var(--clr-black);
+    margin: var(--spc-small) 0px;
+    text-wrap: pretty;
+    line-height: 120%;
+  }
+  
+  h2 {
+    font-family: var(--font-body);
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-semi-bold);
+    color: var(--clr-soft-black);
+    margin: var(--spc-med) 0px var(--spc-small);
+  }
+  
+  .signature {
+    font-family: var(--font-header);
+    font-size: var(--fs-h1-reg);
+    margin: var(--spc-small);
+    text-align: center;
+  }
+  
+  h1 {
+    font-family: var(--font-header);
+    font-size: var(--fs-h1-big);
+    color: var(--clr-deep-teal);
+  }
+  
+  .big-p {
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-light);
+  }
+  
+  .bigger-p {
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-semi-bold);
+  }
+  
+  .post h1 {
+    font-size: var(--fs-h1-reg);
+    color: var(--clr-soft-black);
+  }
+  
+  /* 4. BUTTONS */
+  
+  .white-button,
+  .pink-button,
+  .dark-button {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    text-align: center;
+    padding: 18px 16px 14px;
+    box-shadow: var(--bs-shadow);
+    width: max-content;
+    height: min-content;
+    margin: var(--spc-small);
+    gap: 8px;
+    cursor: pointer;
+    transition: 0.5s ease;
+  }
+  
+  .dark-button {
+    background-color: var(--clr-deep-teal);
+    color: var(--clr-white);
+  }
+  
+  .dark-button:hover {
+    background-color: var(--clr-soft-black);
+  }
+  
+  .white-button {
+    background-color: var(--clr-white);
+  }
+  
+  .white-button:hover {
+    background-color: var(--clr-melon);
+  }
+  
+  .pink-button {
+    background-color: var(--clr-melon);
+  }
+  
+  .pink-button:hover {
+    background-color: var(--clr-deep-teal);
+    color: var(--clr-white);
+  }
+  

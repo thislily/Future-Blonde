@@ -1,0 +1,119 @@
+/*
+Table of Contents
+
+1. Home
+
+*/
+
+
+/* 1. HOME */
+
+.front-splash {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0px auto var(--spc-big);
+    padding: 0px var(--spc-small);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .splash-title {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: var(--spc-small);
+  }
+  
+  .title {
+    width: 100%;
+    object-fit: contain;
+    margin: 0px auto;
+  }
+  
+  .splash-image-container {
+    position: relative;
+    display: inline-block;
+    height: 448px;
+    width: 60%;
+    max-width: 720px;
+    overflow: hidden;
+    margin-right: var(--spc-med);
+    overflow: hidden;
+  }
+  
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease, visibility 1s ease;
+  }
+  
+  .slide.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .splash-image-controller {
+    position: absolute;
+    bottom: var(--spc-small);
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spc-small);
+  }
+  
+  .circle {
+    z-index: 12;
+    width: 20px;
+    height: 20px;
+    border: 2px var(--clr-soft-black) solid;
+    border-radius: 50%;
+    background-color: var(--clr-white);
+    cursor: pointer;
+  }
+  
+  .filled-circle {
+    background-color: var(--clr-melon);
+  }
+  
+  .circle:hover {
+    background-color: var(--clr-melon);
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .splash-image-container:hover .overlay {
+    opacity: 1;
+  }
+  
+  .overlay-text {
+    color: white;
+    font-size: var(--fs-h1-reg);
+    padding: var(--spc-small);
+    text-align: center;
+    width: 80%;
+  }

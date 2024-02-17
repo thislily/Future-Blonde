@@ -1,0 +1,122 @@
+/*
+Table of Contents
+
+1. Header & Footer
+
+*/
+
+/* 1. HEADER & FOOTER*/
+
+header,
+footer {
+  width: 100%;
+  height: 96px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: var(--clr-melon);
+}
+
+header {
+  height: 88px;
+}
+
+.navbar {
+  z-index: 12;
+  position: fixed;
+  top: 0px;
+  box-shadow: var(--bs-shadow-light);
+  transition: top 0.3s;
+}
+
+header .dark-button {
+  z-index: 12;
+}
+
+.max-width {
+  width: 100%;
+  max-width: 1248px;
+  height: 96px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+  background-color: var(--clr-melon);
+}
+
+header .max-width {
+  height: 88px;
+}
+
+.mask-logo {
+  height: 64px;
+  margin: 12px;
+}
+
+.home-link {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  z-index: 12;
+}
+
+.text-logo {
+  max-height: 28px;
+  margin-bottom: var(--spc-small);
+}
+
+footer p {
+  margin-left: var(--spc-small);
+  max-width: 160px;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  gap: var(--spc-med);
+  margin-bottom: 12px;
+  margin-left: var(--spc-med);
+}
+
+.nav-link {
+  transition: 0.5s ease;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  color: var(--clr-deep-teal);
+}
+
+.selected-nav-li {
+  text-decoration: underline;
+  color: var(--clr-deep-teal);
+}
+
+nav img,
+footer img {
+  height: 80px;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  border-radius: 25px;
+  display: block;
+  width: 40px;
+  height: 3px;
+  margin: 8px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--clr-soft-black);
+}
+
