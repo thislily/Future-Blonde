@@ -1,14 +1,14 @@
-export function leaveAComment() {
-    document.body.addEventListener('click', function(event) {
-        if (event.target.id === 'show-comments-form') {
-          console.log('Button clicked');
-          document.getElementById('comments-form').style.display = 'flex';
-          event.target.style.display = 'none';
-          document.getElementById('show-comments-form-container').style.display= 'none';
-        }
-      });
+// export function leaveAComment() {
+//     document.body.addEventListener('click', function(event) {
+//         if (event.target.id === 'show-comments-form') {
+//           console.log('Button clicked');
+//           document.getElementById('comments-form').style.display = 'flex';
+//           event.target.style.display = 'none';
+//           document.getElementById('show-comments-form-container').style.display= 'none';
+//         }
+//       });
       
-  }
+//   }
   
   
 

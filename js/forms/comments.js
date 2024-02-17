@@ -8,7 +8,7 @@ const encodedCredentials = btoa(`${username}:${applicationPassword}`);
 
 const commentsURL = "https://www.rainy-lily-days.one/wp-json/wp/v2/comments"
 
-export function handleCommentForm(id) {
+export function handleCommentForm() {
   document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("comments-form");
     const messageContainer = document.querySelector('.message-container');

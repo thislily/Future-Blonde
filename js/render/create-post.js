@@ -37,27 +37,27 @@ export async function displayPost(data) {
     img.classList.add("image");
   });
 
-  const commentSection = document.querySelector(".comments-section");
-  commentSection.innerHTML = ''; // Clear existing comments
+  // const commentSection = document.querySelector(".comments-section");
+  // commentSection.innerHTML = ''; // Clear existing comments
 
-  // Accessing the first level of the replies array
-  let comments = data._embedded && data._embedded.replies ? data._embedded.replies[0] : null;
+  // // Accessing the first level of the replies array
+  // let comments = data._embedded && data._embedded.replies ? data._embedded.replies[0] : null;
 
-  if (comments && comments.length > 0) {
-    comments.forEach((comment) => {
-      let commentHTML = `
-        <div class="comment-box">
-          <div>
-            <i class="fas fa-user-circle"></i>
-            <p class="bigger-p">${comment.author_name}</p>
-          </div>
-          <p class="big-p">${comment.content.rendered}</p>
-        </div>`;
-      commentSection.innerHTML += commentHTML;
-    });
-  } else {
-    commentSection.innerHTML += `<div class="comment-box"><p class="bigger-p"><i>No comments yet!</i></p></div>`;
-  }
+  // if (comments && comments.length > 0) {
+  //   comments.forEach((comment) => {
+  //     let commentHTML = `
+  //       <div class="comment-box">
+  //         <div>
+  //           <i class="fas fa-user-circle"></i>
+  //           <p class="bigger-p">${comment.author_name}</p>
+  //         </div>
+  //         <p class="big-p">${comment.content.rendered}</p>
+  //       </div>`;
+  //     commentSection.innerHTML += commentHTML;
+  //   });
+  // } else {
+  //   commentSection.innerHTML += `<div class="comment-box"><p class="bigger-p"><i>No comments yet!</i></p></div>`;
+  // }
 }
 
 
