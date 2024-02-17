@@ -323,6 +323,10 @@ Table of Contents
       width: 100%;
       height: 420px;
     }
+
+    .scroller .thumbnail {
+      height: 340px;
+    }
   
     .select-filter {
       margin-left: 16px;
