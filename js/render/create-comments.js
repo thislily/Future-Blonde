@@ -32,19 +32,19 @@ export function leaveAComment() {
 //   }
 // }
 
-export function  createComment() {
+// export function  createComment() {
 
-     let commentHTML =""
-     commentHTML= `
+//      let commentHTML =""
+//      commentHTML= `
           
-          <div class="comment-box">
-            <div>
-                <i class="fas fa-user-circle"></i>
-                <p class="bigger-p">${comment.author_name}</p>
-            </div>
+//           <div class="comment-box">
+//             <div>
+//                 <i class="fas fa-user-circle"></i>
+//                 <p class="bigger-p">${comment.author_name}</p>
+//             </div>
 
-            <p class="big-p">${comment.content.rendered}</p>
-          </div>'
+//             <p class="big-p">${comment.content.rendered}</p>
+//           </div>'
           
-        `;
-}
+//         `;
+// }

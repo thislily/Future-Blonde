@@ -52,7 +52,7 @@ export function handleCommentForm(id) {
         }
         return response.json();
       })
-      .then(data => {
+      .then(() => {
         messageContainer.innerHTML = displayHappyMessage("Your comment was submitted successfully!");
         form.reset();
       })
@@ -63,6 +63,6 @@ export function handleCommentForm(id) {
       
     });
 
-    form.reset();
+    // form.reset();
   });
 }

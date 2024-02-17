@@ -5,7 +5,7 @@ import { blogPage, getPosts, seeMorePosts } from "./render/fetch-posts.js";
 import { postPage, id } from "./render/create-post.js";
 import { createLightbox } from "./UI/lightbox.js";
 import { handleContactForm } from "./forms/contact.js";
-// import { handleCommentForm } from "./forms/comments.js";
+import { handleCommentForm } from "./forms/comments.js";
 import { leaveAComment } from "./render/create-comments.js";
 
 if (location.pathname === "/" || location.pathname === "/index.html") {
@@ -36,6 +36,7 @@ if (
   postPage();
   createLightbox();
   leaveAComment();
+  handleCommentForm(id);
 
 }
 
