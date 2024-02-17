@@ -25,6 +25,20 @@ export async function getPost() {
   loader.classList.remove("loader");
 }
 
+
+//find and define meta description
+function updateMetaDescription(content) {
+  let metaDescription = document.querySelector('meta[name="description"]');
+
+  if (!metaDescription) {
+    metaDescription = document.createElement('meta');
+    metaDescription.setAttribute('name', 'description');
+    document.getElementsByTagName('head')[0].appendChild(metaDescription);
+  }
+
+  metaDescription.setAttribute('content', content);
+}
+
 //display post content
 export async function displayPost(data) {
   let postHTML = `
@@ -39,6 +53,10 @@ export async function displayPost(data) {
   postImages.forEach((img) => {
     img.classList.add("image");
   });
+
+  //update the meta description with the post title
+  const newMetaDescriptionContent = `Check out this week's post, ${data.title.rendered}`;
+  updateMetaDescription(newMetaDescriptionContent);
 
   //Below are remnants of one attempt at a comments section. Just ignore this
 

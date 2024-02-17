@@ -1,6 +1,5 @@
-//validate and send contact data to WP API 
+//validate and send contact data to WP API (this article was very helpful https://css-tricks.com/headless-form-submission-with-the-wordpress-rest-api/)
 import { displayError, displayHappyMessage } from "../UI/messages.js";
-
 
 export function handleContactForm(){
 
