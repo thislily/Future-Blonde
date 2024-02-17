@@ -1,10 +1,10 @@
-import { displayComments } from "./create-comments.js";
+// import { displayComments } from "./create-comments.js";
 
 
 const postContainer = document.querySelector(".post");
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
-const id = params.get("id");
+export const id = params.get("id");
 const anotherURL = "https://www.rainy-lily-days.one/wp-json/wp/v2/posts/"
 const postURL = anotherURL + id
 const currentBreadcrumb = document.getElementById("current-breadcrumb");
@@ -26,7 +26,6 @@ export async function getPost() {
 //display item details
 export async function displayPost(data) {
   let postHTML = "";
-
   postHTML = `
   <h1>${data.title.rendered}</h1>
   ${data.content.rendered}`;
@@ -42,16 +41,14 @@ export async function displayPost(data) {
     post.classList.add("image");
   })
 
- 
+
 }
 
 //function runs on page load
 export async function postPage() {
   const post = await getPost();
   displayPost(post);
-  displayComments(id);
- 
-  
+
 }
 
 

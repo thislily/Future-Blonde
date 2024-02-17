@@ -65,6 +65,9 @@ export function handleCommentForm() {
         console.error("Error:", error);
         messageContainer.innerHTML = displayError("An error occurred while submitting your comment. Please try again.");
       });
+      
     });
+
+    form.reset();
   });
 }

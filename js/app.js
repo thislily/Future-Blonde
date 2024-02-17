@@ -3,11 +3,12 @@ import { handleNav } from "./UI/nav.js";
 import { handleScroller, scroller } from "./UI/scroller.js";
 import { handleCarousel } from "./render/create-carousel.js";
 import { blogPage, getPosts, seeMorePosts } from "./render/fetch-posts.js";
-import { postPage } from "./render/create-post.js";
+import { postPage, id } from "./render/create-post.js";
 import { createLightbox } from "./UI/lightbox.js";
 import { handleContactForm } from "./forms/contact.js";
 import { handleCommentForm } from "./forms/comments.js";
-import { leaveAComment } from "./render/create-comments.js";
+import { displayComments } from "./render/create-comments.js";
+// import { leaveAComment } from "./render/create-comments.js";
 if (location.pathname === "/" || location.pathname === "/index.html") {
   handleCarousel();
 }
@@ -38,7 +39,12 @@ if (
   createLightbox();
   handleCommentForm();
   leaveAComment();
-  
+  document.addEventListener("DOMContentLoaded", () => {
+    displayComments(id);
+  })
+    
+
+;
 }
 
 if (

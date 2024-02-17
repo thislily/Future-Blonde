@@ -22,11 +22,13 @@ async function fetchComments(postId) {
       throw new Error("Failed to fetch comments");
     }
     const comments = await response.json();
+    console.log(window.location.href)
     console.log(comments);
     return comments;
   } catch (error) {
     console.error("Error fetching comments:", error);
-    return []; // Return an empty array in case of error
+    console.log(window.location.href)
+    return [];
   }
 }
 
@@ -34,6 +36,7 @@ export async function displayComments(postId) {
   const comments = await fetchComments(postId);
   let commentsHTML = "";
   const commentsContainer = document.querySelector(".comments-container");
+  console.log(window.location.href)
 
   if (comments.length > 0) {
     comments.forEach((comment) => {
@@ -52,7 +55,7 @@ export async function displayComments(postId) {
     });
   } else {
     commentsHTML += "<p>Be the first to submit a comment!</p>";
-  }
+  }console.log(window.location.href)
 
-  commentsContainer.innerHTML += commentsHTML;
+  commentsContainer.innerHTML += commentsHTML;console.log(window.location.href)
 }
