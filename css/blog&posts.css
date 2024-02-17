@@ -29,7 +29,7 @@ Table of Contents
   
   .thumbnail {
     width: 320px;
-    height: 496px;
+    height: 416px;
     overflow-y: hidden;
     background-color: var(--clr-deep-teal);
     color: var(--clr-white);
@@ -47,6 +47,11 @@ Table of Contents
     font-size: var(--fs-h2);
     font-weight: var(--fw-light);
     color: var(--clr-white);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical; 
+    overflow: hidden;
+
   }
   
   .thumbnail h2 {
@@ -54,6 +59,11 @@ Table of Contents
     font-family: var(--font-body);
     color: var(--clr-white);
     margin-top: var(--spc-small);
+    line-height: 1.2;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical; 
+    overflow: hidden;
   }
   
   .scroller-buttons {
