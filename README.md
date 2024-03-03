@@ -48,10 +48,6 @@ Contributions are welcome and appreciated. To contribute:
 4. Push to the branch (`git push origin feature/YourNewFeature`).
 5. Open a pull request.
 
-## License
-
-This project is licensed under the MIT License - see the `LICENSE` file for details.
-
 ## Contact
 
 [Lily Watson](mailto:lilywatson.dev@google.com)
