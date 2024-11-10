@@ -2,7 +2,7 @@
 
 ## Description
 
-Future Blonde is a satirical blog that combines the percieved luxury of lifestyle and wellness blogging with the setting of a post apocalyptic future. It dynamically loads content from a headless CMS powered by WordPress, hosted at `https://www.rainy-lily-days.one/`, showcasing the versatility and scalability of headless architecture. Designed for those inspired by the wellness lifestyle, this project provides an engaging platform for readers to explore satirical articles, tips, and trends from our AI generated author, Persephone.
+Future Blonde is a satirical blog that combines the percieved luxury of lifestyle and wellness blogging with the setting of a post apocalyptic future. It dynamically loads content from a headless CMS powered by WordPress, showcasing the versatility and scalability of headless architecture. Designed for those inspired by the wellness lifestyle, this project provides an engaging platform for readers to explore satirical articles, tips, and trends from our AI generated author, Persephone.
 
 ## Features
 
