@@ -1,6 +1,6 @@
 # Future Blonde
 
-![Future Blonde Screenshot](images/Screenshot.jpg)
+![Future Blonde Screenshot](images/future-blonde.jpg)
 
 ## 🚀 About the Project
 Future Blonde is a satirical blog that blends the perceived luxury of lifestyle and wellness blogging with a post-apocalyptic setting. It dynamically loads content from a headless CMS powered by WordPress, showcasing the versatility and scalability of headless architecture. Designed for those inspired by the wellness lifestyle, this project provides an engaging platform for readers to explore satirical articles, tips, and trends from our AI-generated author, Persephone.
