@@ -1,54 +1,40 @@
 # Future Blonde
 
-## Description
+![Future Blonde Screenshot](images/Screenshot.jpg)
 
-Future Blonde is a satirical blog that combines the percieved luxury of lifestyle and wellness blogging with the setting of a post apocalyptic future. It dynamically loads content from a headless CMS powered by WordPress, showcasing the versatility and scalability of headless architecture. Designed for those inspired by the wellness lifestyle, this project provides an engaging platform for readers to explore satirical articles, tips, and trends from our AI generated author, Persephone.
+## 🚀 About the Project
+Future Blonde is a satirical blog that blends the perceived luxury of lifestyle and wellness blogging with a post-apocalyptic setting. It dynamically loads content from a headless CMS powered by WordPress, showcasing the versatility and scalability of headless architecture. Designed for those inspired by the wellness lifestyle, this project provides an engaging platform for readers to explore satirical articles, tips, and trends from our AI-generated author, Persephone.
 
-## Features
+## 🎨 Features
+- 📡 **Dynamic Content Loading** – Integrates with a headless WordPress CMS for fresh and updated content.
+- 📱 **Responsive Design** – Delivers a smooth experience across all devices.
+- ⚡ **Fast and Secure** – Optimized for speed and hosted on Netlify for enhanced security.
+- ♿ **Accessibility Focused** – Ensures wide accessibility to accommodate all users.
 
-- **Dynamic Content Loading:** Integrates with a headless WordPress CMS for fresh and updated content.
-- **Responsive Design:** Delivers a smooth experience across all devices.
-- **Fast and Secure:** Optimized for speed and hosted on Netlify for enhanced security.
-- **Accessibility Focused:** Ensures wide accessibility to accommodate all users.
+## 🌍 Live Demo
+Visit the live site: [Future Blonde](https://futureblonde.netlify.app/)
 
-## Technologies Used
+## 🛠️ Tech Stack
+- **Frontend**: HTML5, CSS3, JavaScript
+- **CMS**: WordPress (Headless)
+- **Hosting**: Netlify
 
-- HTML5
-- CSS3
-- JavaScript
-- WordPress (Headless CMS)
-- Netlify (Hosting)
+## 📦 Installation & Setup
+To run this project locally, follow these steps:
 
-## Getting Started
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/Noroff-FEU-Assignments/project-exam-1-thislily.git
+cd project-exam-1-thislily
+```
 
-### Prerequisites
+### 2️⃣ Open the Project
+No dependencies are required. Simply open `index.html` in your browser, or use a live server tool for development.
 
-- A modern web browser.
-- Optional: A code editor for development (e.g., Visual Studio Code).
+## 📬 Contact
+For any inquiries or feedback, feel free to reach out:
+📧 [lilywatson.dev@gmail.com](mailto:lilywatson.dev@gmail.com)
 
-### Installation
+---
+**Made by Lily Watson**
 
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/Noroff-FEU-Assignments/project-exam-1-thislily.git
-   ```
-2. There's no need to install dependencies. Simply open `index.html` in your browser, or use a live server tool.
-
-## Usage
-
-The site is a showcase of content managed through WordPress as a headless CMS, reflecting how content can be decoupled from the presentation layer. Browse through various sections to read articles and tips related to wellness and lifestyle. Subscribe to recieve a welcome email from Persephone.
-
-## Contributing
-
-Contributions are welcome and appreciated. To contribute:
-
-1. Fork the project.
-2. Create your feature branch (`git checkout -b feature/YourNewFeature`).
-3. Commit your changes (`git commit -m 'Add some YourNewFeature'`).
-4. Push to the branch (`git push origin feature/YourNewFeature`).
-5. Open a pull request.
-
-## Contact
-
-[Lily Watson](mailto:lilywatson.dev@google.com)
-[Future Blonde](https://futureblonde.netlify.app/)
